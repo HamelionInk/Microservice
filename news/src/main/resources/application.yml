@@ -1,0 +1,30 @@
+server:
+  port: 0
+
+spring:
+  application:
+    name: news
+  devtools:
+    restart:
+      enabled: true
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/news
+    username: postgres
+    password: 12345
+
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://auth-server:9000
+
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8010/eureka
