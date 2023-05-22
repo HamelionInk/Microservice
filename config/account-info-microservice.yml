@@ -3,9 +3,14 @@ spring:
     url: jdbc:postgresql://localhost:5432/account-info-database
     username: postgres
     password: {cipher}686b55a71a971471f44257116065ee718d20bd843ab7e94baf0dd00b6487833c
+  database:
+    driverClassName: org.postgresql.Driver
   jpa:
     hibernate:
       dll-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
 
 eureka:
   instance:
