@@ -8,14 +8,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="config-server" />
+        <module name="eureka-server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="account" target="17" />
       <module name="authorization-server" target="17" />
-      <module name="eureka-server" target="17" />
       <module name="gateway-server" target="17" />
       <module name="news" target="17" />
+      <module name="test-microservice" target="17" />
+      <module name="test2-microservice" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -26,6 +28,8 @@
       <module name="eureka-server" options="-parameters" />
       <module name="gateway-server" options="-parameters" />
       <module name="news" options="-parameters" />
+      <module name="test-microservice" options="-parameters" />
+      <module name="test2-microservice" options="-parameters" />
     </option>
   </component>
 </project>
