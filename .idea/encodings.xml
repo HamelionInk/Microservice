@@ -4,5 +4,6 @@
     <file url="file://$PROJECT_DIR$/account-info-microservice/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/config-server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/news-feed-microservice/src/main/java" charset="UTF-8" />
   </component>
 </project>

@@ -27,6 +27,7 @@
         <module>config-server</module>
         <module>eureka-server</module>
         <module>account-info-microservice</module>
+        <module>news-feed-microservice</module>
     </modules>
 
     <build>
