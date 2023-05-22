@@ -3,13 +3,12 @@ server:
 
 eureka:
   instance:
-    hostname: eureka-server
     preferIpAddress: true
   client:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://localhost:8070/eureka/
   server:
     waitTimeInMsWhenSyncEmpty: 5
 
