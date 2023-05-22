@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/account-info-database
+    username: postgres
+    password: {cipher}686b55a71a971471f44257116065ee718d20bd843ab7e94baf0dd00b6487833c
+  jpa:
+    hibernate:
+      dll-auto: update
+
+eureka:
+  instance:
+    preferIdAddress: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://eureka-server:8070/eureka/
