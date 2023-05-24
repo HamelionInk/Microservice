@@ -21,14 +21,12 @@ eureka:
       defaultZone: http://localhost:8070/eureka/
 
 management:
+  health:
+    circulitbreakers:
+      enabled: true
+    ratelimiters: true
   endpoints:
-    enabled-by-default: true
-    health:
-      enable: true
-      show-details: always
-
-resilience4j:
-  circuitbreaker:
-    instances:
-      newsFeedService:
-        registerHealthIndicator: true
+    health: always
+    web:
+      exposure:
+        include: "*"
