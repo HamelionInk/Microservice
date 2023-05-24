@@ -20,6 +20,22 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8070/eureka/
 
+resilience4j:
+  circuitbreaker:
+    instance:
+      newsFeedService:
+        registerHealthIndicator: true
+        ringBufferSizeInClosedState: 5
+        ringBufferSizeInHalfOpenState: 3
+        waitDurationInOpenState: 10s
+        failureRateThreshold: 50
+        recordExceptions:
+          - org.springframework.web.client.HttpServerErrorException
+          - java.io.IOException
+          - java.util.concurrent.TimeoutException
+          - org.springframework.web.client.ResourceAccessException
+
+
 management:
   health:
     circulitbreakers:
