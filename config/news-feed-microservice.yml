@@ -23,6 +23,12 @@ eureka:
 management:
   endpoints:
     enabled-by-default: true
-    web:
-      exposure:
-        include: "*"
+    health:
+      enable: true
+      show-details: always
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      newsFeedService:
+        registerHealthIndicator: true
