@@ -1,5 +1,6 @@
 package com.lemi.newsfeedmicroservice.service.impl;
 
+import com.lemi.newsfeedmicroservice.client.AccountInfoClientApi;
 import com.lemi.newsfeedmicroservice.dto.request.NewsFeedRequestDto;
 import com.lemi.newsfeedmicroservice.dto.response.NewsFeedResponseDto;
 import com.lemi.newsfeedmicroservice.exception.NotFoundException;
@@ -21,10 +22,15 @@ public class NewsFeedServiceImpl implements NewsFeedService {
 
     private final NewsFeedRepository newsFeedRepository;
     private final NewsFeedMapper newsFeedMapper;
+    private final AccountInfoClientApi accountInfoClientApi;
 
     @Override
     public NewsFeedResponseDto create(@NonNull NewsFeedRequestDto newsFeedRequestDto) {
         var newsFeed = newsFeedMapper.toEntity(newsFeedRequestDto);
+
+        var accountInfo = accountInfoClientApi.getById(2L);
+
+        newsFeed.setFullName(accountInfo.getFullName());
 
         return newsFeedMapper.toDto(newsFeedRepository.save(newsFeed));
     }
