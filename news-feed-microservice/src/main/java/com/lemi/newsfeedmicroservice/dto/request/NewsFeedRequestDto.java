@@ -13,5 +13,4 @@ public class NewsFeedRequestDto {
 
     private String title;
     private String description;
-    private String fullName;
 }
