@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.concurrent.TimeoutException;
 
 @RestController
 @RequiredArgsConstructor
@@ -32,7 +33,7 @@ public class NewsFeedController {
     }
 
     @GetMapping
-    public ResponseEntity<List<NewsFeedResponseDto>> getAll() {
+    public ResponseEntity<List<NewsFeedResponseDto>> getAll() throws TimeoutException {
         var responseBody = newsFeedService.getAll();
 
         return ResponseEntity.status(HttpStatus.ACCEPTED).body(responseBody);
