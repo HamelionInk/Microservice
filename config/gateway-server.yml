@@ -18,8 +18,10 @@ spring:
         lowerCaseServiceId: true
 
 management:
+  endpoint:
+    gateway:
+      enabled: true
   endpoints:
-    health: always
     web:
       exposure:
         include: "*"
