@@ -16,3 +16,10 @@ spring:
       discovery.locator:
         enabled: true
         lowerCaseServiceId: true
+
+management:
+  endpoints:
+    health: always
+    web:
+      exposure:
+        include: "*"
