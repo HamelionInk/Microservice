@@ -35,6 +35,28 @@ resilience4j.circuitbreaker:
           - java.util.concurrent.TimeoutException
           - org.springframework.web.client.ResourceAccessException
 
+resilience4j.bulkhead:
+  instances:
+    bulkheadNewsFeedService:
+      maxWaitDuration: 10ms
+      maxConcurrentCalls: 20
+
+resilience4J.thread-pool-bulkhead:
+  instances:
+    bulkheadNewsFeedService:
+      maxThreadPoolSize: 1
+      coreThreadPoolSize: 1
+      queueCapacity: 1
+      keepAliveDuration: 20ms
+
+resilience4J.retry:
+  instances:
+    retryNewsFeedService:
+      maxRetryAttempts: 5
+      waitDuration: 10000
+      retry-exception:
+        - java.util.concurrent.TimeoutException
+
 
 management:
   health:
