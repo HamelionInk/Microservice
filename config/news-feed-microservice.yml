@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/news_feed_database
+    url: jdbc:postgresql://localhost:5452/news_feed_database
     username: postgres
     password: '{cipher}686b55a71a971471f44257116065ee718d20bd843ab7e94baf0dd00b6487833c'
     driver-class-name: org.postgresql.Driver
