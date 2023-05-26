@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:postgresql://database:5432/test-database
+    url: jdbc:postgresql://database2:5432/test-database
     username: postgres
     password: '{cipher}686b55a71a971471f44257116065ee718d20bd843ab7e94baf0dd00b6487833c'
     driver-class-name: org.postgresql.Driver
